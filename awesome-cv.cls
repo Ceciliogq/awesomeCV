@@ -476,11 +476,15 @@
             {\@headersocialsep}
           \href{https://stackoverflow.com/users/\@stackoverflowid}{\faStackOverflow\ \@stackoverflowname}
         }
-        \ifthenelse{\isundefined{\@googlescholarid}}%
-        {}%
-        {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{}%{\acvHeaderSocialSep}%
-          \href{https://scholar.google.com/citations?user=\@googlescholarid}{\faGraduationCap\acvHeaderIconSep\@googlescholarname}%
+        \ifthenelse{\isundefined{\@googlescholarid}}
+        {}
+        {
+        \ifbool{isstart}
+            {
+                \setbool{isstart}{false}
+            }
+            {\@headersocialsep}
+          \href{https://scholar.google.com/citations?user=\@googlescholarid}{\faGraduationCap\ \@googlescholarname}%
         }%
       \ifthenelse{\isundefined{\@linkedin}}
         {}
